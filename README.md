@@ -54,7 +54,7 @@ console.log('Server running at 127.0.0.1:5353')
 function handler(req, res) {
   console.log('%s:%s/%s %j', req.connection.remoteAddress, req.connection.remotePort, req.connection.type, req)
 
-  var question = res.question[0]
+  var question = req.question[0]
     , hostname = question.name
     , length = hostname.length
     , ttl = Math.floor(Math.random() * 3600)
